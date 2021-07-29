@@ -4,9 +4,45 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+// REPEAT
+
+.mask {
+    position: relative;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+    }
+    &--dark {
+        &:before {
+            background-color: rgba(0,0,0, .5);
+        }
+    }
+    &-child {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.section_title {
+    font-size: 25px;
+    letter-spacing: 0px;
+    line-height: 30px;
+    color: #363636;
+    font-weight: 700;
+    text-align: center;
+}
+
 .container {
     width: 1170px;
 }
+
+// HEADER
 
 header {
     height: 125px;
@@ -95,6 +131,7 @@ header {
 }
 
 
+// BANNER
 
 .banner {
     background-image: url('/img/baner.png');
@@ -151,16 +188,11 @@ header {
 }
 
 
+// BOOKING
+
 .booking {
     padding-top: 80px;
-    &__title {
-        font-size: 25px;
-        letter-spacing: 0px;
-        line-height: 30px;
-        color: #363636;
-        font-weight: 700;
-        text-align: center;
-    }
+    
     &__block {
         padding-top: 60px;
         display: flex;
@@ -226,3 +258,98 @@ header {
         text-align: center;
     }
 }
+
+
+// POPULAR
+
+.popular {
+    padding-top: 80px;
+    padding-bottom: 80px;
+        &__card {
+            border: 1px solid #b5b5b5;
+            height: 100%;
+            display: grid;
+            grid-template-rows: auto;
+            img {
+                grid-row-start: 1;
+                max-width: 100%;
+                display: block;
+            }
+            &_body {
+                grid-row-start: 2;
+                padding: 0 20px;
+                display: grid;
+                grid-template-rows: repeat(3, 1fr);
+            }
+            &_top {
+                padding: 20px 0;
+                border-bottom: 1px solid #b5b5b5;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .card_title {
+                    font-size: 16px;
+                    line-height: 18px;
+                    color: #333333;
+                    font-weight: 500;
+                }
+                .card_info {
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #b5b5b5;
+                    font-weight: 500;
+                    display: inline;
+                }
+                span {
+                    display: block;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #333333;
+                    font-weight: 500;
+                }
+            }
+            &_center {
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    column-gap: 15px;
+                    padding: 0;
+                    list-style-position: inside;
+                    li {
+                        &::marker  {
+                            color: #4571d5;
+                        }
+                        font-size: 12px;
+                        line-height: 27px;
+                        color: #555555;
+                        font-weight: 500;
+                    }
+                }
+            }
+            &_bottom {
+
+            }
+            &_price {
+                font-size: 18px;
+                line-height: 20px;
+                color: #27a733;
+                font-weight: 500;
+                text-align: center;
+            }
+            &_submit {
+                width: max-content;
+                padding: 10px 30px;
+                background-color: #E7a300;
+                margin: 0 auto;
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    font-weight: 600;
+                }
+            }
+        }
+}
+
+
