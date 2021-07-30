@@ -50,6 +50,9 @@ header {
     padding-top: 50px;
     .menu {
       display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 20px;
       &__list {
         font-size: 14px;
         letter-spacing: 0px;

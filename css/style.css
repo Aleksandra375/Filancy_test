@@ -52,6 +52,11 @@ header .header_block .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  gap: 20px;
 }
 
 header .header_block .menu__list {
