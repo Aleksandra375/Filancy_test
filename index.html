@@ -13,10 +13,10 @@
     <header>
         <div class="container header_block">
             <div class="row">
-                <div class="col-2">
+                <div class="col-lg-2 col-md-6">
                     <img src="/img/logo.png" alt="logo" class="logo">
                 </div>
-                <div class="col-8">
+                <div class="col-lg-8 col-md-6">
                     <nav>
                         <ul class="menu">
                             <ul class="menu__list"><a href="#">Главная</a></ul>
@@ -31,10 +31,10 @@
                         </div>
                     </nav>
                 </div>
-                <div class="col-2">
+                <div class="col-lg-2 col-md-12">
                     <div class="contacts">
                         <a href="#" class="contacts__tel">38 (067) 761-20-17</a>
-                        <a href="" class="contacts__btn">Заказать звонок</a>
+                        <a href="#" class="contacts__btn">Заказать звонок</a>
                     </div>
                 </div>
             </div>
@@ -44,14 +44,14 @@
     <section class="banner mask mask--dark d-flex align-items-center">
         <div class="container mask-child">
             <div class="row">
-                <div class="col-8 d-flex align-items-center">
+                <div class="col-lg-8 col-md-12 d-flex align-items-center">
                 <div class="banner__text">
                     <h1>Парк Отель “Берёзка”</h1>
                     <p>Забронируйте номер онлайн или по <br>
                         номеру телефона <a href="#">+38 (067) 761-20-17</a></p>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4 col-md-12">
                 <div class="banner__form">
                     <p class="banner__form_title">Оставьте запрос на лучшую 
                         цену кемпинг “Альянс”</p>
@@ -117,43 +117,47 @@
 
     <section class="popular">
         <h3 class="section_title">Популярные номера</h3>
-        <div class="container">
-            <div class="row align-items-stretch">
-                <div class="col-3">
-                    <div class="popular__card">
-                        <img src="/img/standart_2h.jpg" alt="standart_2h">
-                        <div class="popular__card_body">
-                            <div class="popular__card_top">
-                                <p class="card_title">Стандарт 2х-местный (север, юг) <span class="card_info">Площадь: 14 м²</span></p>
-                                <span>Кол-во спальных мест: 2</span>
+        <div class="container cards">
+            <div class="row justify-content-center">
+                
+<!-- 1 -->
+                <div class="col-lg-3 col-md-6 col-sm-12 card-group">
+                    <div class="card">
+                        <img src="/img/standart_2h.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-body-title">
+                                <h5 class="card-title">Стандарт 2х-местный 
+                                    (север, юг) <span class="custom-card__body_header_info">Площадь: 14 м²</span></h5>
+                                <p class="card-text">Кол-во спальных мест: 2</p>
                             </div>
-                            <div class="popular__card_center">
+                          <hr>
+                            <div class="custom-card__body_body">
                                 <ul>
-                                    <li>Wi-Fi</li>
-                                    <li>Кондиционер</li>
-                                    <li>Балкон</li>
-                                    <li>Санузел</li>
-                                    <li>Холодильник</li>
+                                        <li>Wi-Fi</li>
+                                        <li>Кондиционер</li>
+                                        <li>Балкон</li>
+                                        <li>Санузел</li>
+                                        <li>Холодильник</li>
                                 </ul>
-                            </div>
-                            <div class="popular__card_bottom">
-                                <div class="popular__card_price">от 968 грн</div>
-                                <div class="popular__card_submit">
-                                    <a href="#">Бронировать</a> 
-                                </div>
-                            </div>
+                            </div> 
                         </div>
+                            <div class="custom-card__body_footer_price">от 968 грн</div>
+                            <a href="#" class="btn btn-primary">Бронировать</a>
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class="popular__card">
-                        <img src="/img/standart_3h.jpg" alt="standart_3h">
-                        <div class="popular__card_body">
-                            <div class="popular__card_top">
-                                <p class="card_title">Стандарт 3х-местный (север, юг) <span class="card_info">Площадь: 14 м²</span></p>
-                                <span>Кол-во спальных мест: 3</span>
+<!-- 2 -->
+
+                <div class="col-lg-3 col-md-6 col-sm-12 card-group">
+                    <div class="card">
+                        <img src="/img/standart_3h.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-body-title">
+                                <h5 class="card-title">Стандарт 3х-местный 
+                                    (север, юг) <span class="custom-card__body_header_info">Площадь: 14 м²</span></h5>
+                                <p class="card-text">Кол-во спальных мест: 3</p>
                             </div>
-                            <div class="popular__card_center">
+                          <hr>
+                            <div class="custom-card__body_body">
                                 <ul>
                                     <li>Wi-Fi</li>
                                     <li>Кондиционер</li>
@@ -164,24 +168,23 @@
                                     <li>Чайник</li>
                                 </ul>
                             </div>
-                            <div class="popular__card_bottom">
-                                <div class="popular__card_price">от 1398 грн</div>
-                                <div class="popular__card_submit">
-                                    <a href="#">Бронировать</a> 
-                                </div>
-                            </div>
                         </div>
+                            <div class="custom-card__body_footer_price">от 1398 грн</div>
+                            <a href="#" class="btn btn-primary">Бронировать</a>
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class="popular__card">
-                        <img src="/img/cottage_2h.jpg" alt="cottage_2h">
-                        <div class="popular__card_body">
-                            <div class="popular__card_top">
-                                <p class="card_title">Коттедж 2х-местный <span class="card_info">Площадь: 18 м²</span></p>
-                                <span>Кол-во спальных мест: 2</span>
+<!-- 3 -->
+
+                <div class="col-lg-3 col-md-6 col-sm-12 card-group">
+                    <div class="card">
+                        <img src="img/cottage_2h.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-body-title">
+                                <h5 class="card-title">Коттедж 2х-местный <span class="custom-card__body_header_info">Площадь: 14 м²</span></h5>
+                                <p class="card-text">Кол-во спальных мест: 2</p>
                             </div>
-                            <div class="popular__card_center">
+                          <hr>
+                            <div class="custom-card__body_body">
                                 <ul>
                                     <li>Wi-Fi</li>
                                     <li>Кондиционер</li>
@@ -192,24 +195,23 @@
                                     <li>Туалетные принадлежности</li>
                                 </ul>
                             </div>
-                            <div class="popular__card_bottom">
-                                <div class="popular__card_price">от 888 грн</div>
-                                <div class="popular__card_submit">
-                                    <a href="#">Бронировать</a> 
-                                </div>
-                            </div>
                         </div>
+                            <div class="custom-card__body_footer_price">от 888 грн</div>
+                            <a href="#" class="btn btn-primary">Бронировать</a>
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class="popular__card">
-                        <img src="/img/cottage_4h.jpg" alt="cottage_4h">
-                        <div class="popular__card_body">
-                            <div class="popular__card_top">
-                                <p class="card_title">Коттедж 4х-местный <span class="card_info">Площадь: 33 м²</span></p>
-                                <span>Кол-во спальных мест: 4</span>
+<!-- 4 -->
+
+                <div class="col-lg-3 col-md-6 col-sm-12 card-group">
+                    <div class="card">
+                        <img src="img/cottage_4h.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-body-title">
+                                <h5 class="card-title">Коттедж 4х-местный (2 комнаты) <span class="custom-card__body_header_info">Площадь: 14 м²</span></h5>
+                                <p class="card-text">Кол-во спальных мест: 4</p>
                             </div>
-                            <div class="popular__card_center">
+                          <hr>
+                            <div class="custom-card__body_body">
                                 <ul>
                                     <li>Wi-Fi</li>
                                     <li>Кондиционер</li>
@@ -218,19 +220,13 @@
                                     <li>Холодильник</li>
                                     <li>Чайник</li>
                                 </ul>
-                            </div>
-                            <div class="popular__card_bottom">
-                                <div class="popular__card_price">от 2098 грн</div>
-                                <div class="popular__card_submit">
-                                    <a href="#">Бронировать</a> 
-                                </div>
-                            </div>
+                            </div>                         
                         </div>
-                    </div>
+                            <div class="custom-card__body_footer_price">от 2098 грн</div>
+                            <a href="#" class="btn btn-primary">Бронировать</a>
+                        </div>
                 </div>
-
             </div>
-            
         </div>
     </section>
     

@@ -142,7 +142,10 @@ header .header_block .contacts__btn {
 
 .banner {
   background-image: url("/img/baner.png");
-  height: 490px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: 25%;
+  min-height: 490px;
 }
 
 .banner__text h1 {
@@ -163,8 +166,8 @@ header .header_block .contacts__btn {
 }
 
 .banner__form {
-  width: 300px;
-  height: 360px;
+  width: auto;
+  height: auto;
   background-color: #fff;
   padding: 20px;
 }
@@ -189,13 +192,13 @@ header .header_block .contacts__btn {
   width: 100%;
 }
 
-.banner__form form input[type="name"] {
+.banner__form form input[type='name'] {
   height: 80px;
 }
 
-.banner__form form input[type="submit"] {
+.banner__form form input[type='submit'] {
   width: 100%;
-  background-color: #E7a300;
+  background-color: #e7a300;
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
@@ -291,71 +294,50 @@ header .header_block .contacts__btn {
   padding-bottom: 80px;
 }
 
-.popular__card {
-  border: 1px solid #b5b5b5;
-  height: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
+.popular .cards {
+  padding-top: 30px;
 }
 
-.popular__card img {
-  -ms-grid-row: 1;
-      grid-row-start: 1;
-  max-width: 100%;
-  display: block;
+.popular .card {
+  width: 18rem;
 }
 
-.popular__card_body {
-  -ms-grid-row: 2;
-      grid-row-start: 2;
-  padding: 0 20px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: (1fr)[3];
-      grid-template-rows: repeat(3, 1fr);
-}
-
-.popular__card_top {
-  padding: 20px 0;
-  border-bottom: 1px solid #b5b5b5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.popular__card_top .card_title {
+.popular .card-title {
+  margin-bottom: .5rem;
   font-size: 16px;
   line-height: 18px;
   color: #333333;
   font-weight: 500;
 }
 
-.popular__card_top .card_info {
-  font-size: 12px;
-  line-height: 18px;
-  color: #b5b5b5;
-  font-weight: 500;
-  display: inline;
+.popular .card-body-title {
+  height: 5rem;
 }
 
-.popular__card_top span {
-  display: block;
+.popular .custom-card__body_header_info {
+  font-size: 12px;
+  line-height: 16px;
+  color: #b5b5b5;
+  font-weight: 500;
+}
+
+.popular .card-text {
   font-size: 14px;
   line-height: 20px;
   color: #333333;
   font-weight: 500;
 }
 
-.popular__card_center ul {
+.popular .custom-card__body_body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.popular .custom-card__body_body ul {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -365,41 +347,268 @@ header .header_block .contacts__btn {
           column-gap: 15px;
   padding: 0;
   list-style-position: inside;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 
-.popular__card_center ul li {
+.popular .custom-card__body_body ul li {
   font-size: 12px;
   line-height: 27px;
   color: #555555;
   font-weight: 500;
 }
 
-.popular__card_center ul li::marker {
+.popular .custom-card__body_body ul li::marker {
   color: #4571d5;
 }
 
-.popular__card_price {
+.popular .custom-card__body_footer_price {
   font-size: 18px;
   line-height: 20px;
   color: #27a733;
   font-weight: 500;
   text-align: center;
+  margin-bottom: 10px;
 }
 
-.popular__card_submit {
+.popular a.btn.btn-primary {
+  background-color: #e7a300;
+  border-color: #e7a300;
+  border-radius: 0;
+  display: block;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  padding: 10px 30px;
-  background-color: #E7a300;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
-.popular__card_submit a {
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 600;
+@media (max-width: 1199px) {
+  header .header_block {
+    padding-top: 30px;
+  }
+  header .header_block .menu__list {
+    font-size: 12px;
+  }
+  header .header_block .contacts__tel {
+    font-size: 14px;
+  }
+  header .header_block .contacts__btn {
+    font-size: 16px;
+  }
+  .section_title {
+    font-size: 22px;
+  }
+  .banner {
+    height: auto;
+    background-size: cover;
+  }
+  .banner__text h1 {
+    font-size: 28px;
+  }
+  .banner__text p {
+    font-size: 18px;
+  }
+  .banner__form {
+    padding: 15px;
+  }
+  .banner__form_title {
+    font-size: 14px;
+  }
+  .banner__form form input {
+    font-size: 12px;
+  }
+  .banner__form form input[type="name"] {
+    height: 50px;
+  }
+  .booking {
+    padding-top: 30px;
+  }
+  .booking__block {
+    padding-top: 30px;
+  }
+  .booking__wrap_row {
+    width: 60px;
+    height: 60px;
+  }
+  .booking__wrap_row span {
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .booking__descr {
+    padding-top: 30px;
+    font-size: 14px;
+  }
+  .booking__galery {
+    padding: 30px 0;
+  }
+  .booking__galery_img {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+  }
+  .booking__btn {
+    font-size: 12px;
+  }
+  .popular {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .popular__card_top .card-title {
+    font-size: 14px;
+  }
+  .popular__card_top .card-info {
+    font-size: 10px;
+  }
+  .popular__card_top span {
+    font-size: 12px;
+  }
+  .popular__card_center ul li {
+    font-size: 10px;
+  }
+  .popular__card_price {
+    font-size: 14px;
+  }
+  .popular__card_submit {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    width: auto;
+  }
+  header .header_block {
+    padding-top: 10px;
+  }
+  header .header_block .menu {
+    display: none;
+  }
+  .banner__text {
+    width: 100%;
+  }
+  .banner__text h1 {
+    text-align: center;
+  }
+  .banner__text p {
+    text-align: center;
+  }
+  .popular .card-group {
+    margin: 10px 0;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 25px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 26px;
+    height: 18px;
+  }
+  .hamburger span {
+    display: block;
+    background-color: #333333;
+    height: 2px;
+    width: 100%;
+    margin-bottom: 5px;
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+  }
+  .hamburger_active span {
+    margin-bottom: -2px;
+  }
+  .hamburger_active span:nth-child(1) {
+    -webkit-transform: translateY(3px) rotate(-45deg);
+            transform: translateY(3px) rotate(-45deg);
+  }
+  .hamburger_active span:nth-child(2) {
+    display: none;
+  }
+  .hamburger_active span:nth-child(3) {
+    -webkit-transform: translateY(3px) rotate(45deg);
+            transform: translateY(3px) rotate(45deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .section_title {
+    padding: 0 10px;
+  }
+  .booking__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .booking__galery {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 575px) {
+  header .header_block .contacts__tel {
+    font-size: 12px;
+  }
+  header .header_block .contacts__btn {
+    font-size: 14px;
+  }
+  .section_title {
+    font-size: 20px;
+  }
+  .banner__text h1 {
+    font-size: 24px;
+  }
+  .banner__text p {
+    font-size: 16px;
+  }
+  .booking__wrap_row {
+    width: 55px;
+    height: 55px;
+  }
+  .booking__descr {
+    padding-top: 20px;
+    font-size: 12px;
+  }
+  .booking__galery {
+    padding: 20px 0;
+  }
+  .booking__btn {
+    font-size: 10px;
+  }
+  .popular {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .popular .card {
+    width: auto;
+  }
+  .popular .cards {
+    padding-top: 10px;
+  }
+  .popular .card-title {
+    font-size: 14px;
+  }
+  .popular .card-text {
+    font-size: 12px;
+  }
+  .popular .custom-card__body_header_info {
+    font-size: 10px;
+  }
+  .popular .custom-card__body_body ul li {
+    font-size: 10px;
+  }
+  .popular .custom-card__body_footer_price {
+    font-size: 16px;
+  }
+  .popular a.btn.btn-primary {
+    font-size: 12px;
+  }
+  .popular .card-body {
+    padding: 0.5rem 1rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
