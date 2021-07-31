@@ -55,11 +55,11 @@ header .header_block .menu {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  list-style: none;
   gap: 20px;
+  list-style: none;
 }
 
-header .header_block .menu__list {
+header .header_block .menu li {
   font-size: 14px;
   letter-spacing: 0px;
   line-height: 50px;
@@ -68,18 +68,14 @@ header .header_block .menu__list {
   text-align: center;
 }
 
-header .header_block .menu__list a {
+header .header_block .menu li a {
   color: #333333;
   text-decoration: none;
   padding-bottom: 15px;
 }
 
-header .header_block .menu__list a:hover {
+header .header_block .menu li a:hover {
   border-bottom: 5px solid #4571d5;
-}
-
-header .header_block .hamburger {
-  display: none;
 }
 
 header .header_block .contacts {
@@ -163,6 +159,7 @@ header .header_block .contacts__btn {
   font-size: 24px;
   color: #ffffff;
   font-weight: 700;
+  width: 70%;
 }
 
 .banner__text p a {
@@ -274,8 +271,7 @@ header .header_block .contacts__btn {
 }
 
 .booking__galery_img {
-  max-width: 350px;
-  max-height: 250px;
+  width: 30%;
 }
 
 .booking__btn {
@@ -448,7 +444,7 @@ header .header_block .contacts__btn {
     padding: 30px 0;
   }
   .booking__galery_img {
-    width: 70%;
+    width: 30%;
     display: block;
     margin: 0 auto;
   }
@@ -488,6 +484,18 @@ header .header_block .contacts__btn {
   }
   header .header_block .menu {
     display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #fff;
+    position: relative;
+    z-index: 10;
+  }
+  header .header_block .menu_active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .banner__text {
     width: 100%;
@@ -497,6 +505,15 @@ header .header_block .contacts__btn {
   }
   .banner__text p {
     text-align: center;
+  }
+  .booking__galery {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .booking__galery_img {
+    width: 100%;
   }
   .popular .card-group {
     margin: 10px 0;
@@ -510,6 +527,7 @@ header .header_block .contacts__btn {
             transform: translateY(-50%);
     width: 26px;
     height: 18px;
+    z-index: 10;
   }
   .hamburger span {
     display: block;

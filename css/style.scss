@@ -29,6 +29,7 @@
   }
 }
 
+
 .section_title {
   font-size: 25px;
   letter-spacing: 0px;
@@ -51,9 +52,9 @@ header {
     .menu {
       display: flex;
       justify-content: center;
-      list-style: none;
       gap: 20px;
-      &__list {
+      list-style: none;
+      li {
         font-size: 14px;
         letter-spacing: 0px;
         line-height: 50px;
@@ -69,9 +70,6 @@ header {
           }
         }
       }
-    }
-    .hamburger {
-      display: none;
     }
     .contacts {
       display: flex;
@@ -147,6 +145,7 @@ header {
       font-size: 24px;
       color: #ffffff;
       font-weight: 700;
+      width: 70%;
       a {
         color: #fff;
         text-decoration: none;
@@ -240,8 +239,7 @@ header {
     justify-content: center;
     gap: 20px;
     &_img {
-      max-width: 350px;
-      max-height: 250px;
+      width: 30%;
     }
   }
   &__btn {
@@ -409,7 +407,7 @@ header {
       &__galery {
           padding: 30px 0;
           &_img {
-            width: 70%;
+            width: 30%;
             display: block;
             margin: 0 auto;
           }
@@ -462,6 +460,13 @@ header {
         padding-top: 10px;
         .menu {
           display: none;
+          flex-direction: column;
+          background-color: #fff;
+          position: relative;
+          z-index: 10;
+          &_active {
+            display: flex;
+          }
         }
     }
     
@@ -475,6 +480,15 @@ header {
     }
     p {
       text-align: center;
+    }
+  }
+}
+
+.booking {
+  &__galery {
+    flex-direction: column;
+    &_img {
+      width: 100%;
     }
   }
 }
@@ -493,6 +507,7 @@ header {
     transform: translateY(-50%);
     width: 26px;
     height: 18px;
+    z-index: 10;
     span {
       display: block;
       background-color: #333333;
@@ -517,6 +532,9 @@ header {
     }
   }
 }
+
+
+
 
 @media (max-width: 767px) {
   .section_title {
